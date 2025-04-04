@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link th:href="@{/css/edition.css}" rel="stylesheet">
+    <script th:src="@{/js/edition.js}"></script>
+    <title>Edicion</title>
+</head>
+<body>
+    <div class="modal" id="editionModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" id="modalContentEdition"></div>
+        </div>
+    </div>
+    <div th:replace="~{fragments/general.html :: navbar (isAdmin=${isAdmin}, isUser=${isUser})}"></div>
+    <div class="container border mt-4 border-secundary rounded">
+        <div class="row">
+            <div class="col pt-1 pb-1 bg-primary fw-semibold rounded-top">Agregar</div>
+        </div>
+        <form th:action="@{/pokemon/addGroup}" method="post" id="formAddGroup">
+            <div class="row pt-3 pb-3">
+                <div class="col">
+                    <label for="addGroupStart" class="form-label">Desde</label>
+                    <input type="text" class="form-control" name="addGroupStart" id="addGroupStart" placeholder="min: 1">
+                </div>
+                <div class="col">
+                    <label for="addGroupEnd" class="form-label">Hasta</label>
+                    <input type="text" class="form-control" name="addGroupEnd" id="addGroupEnd" th:placeholder="|max: ${count}|">
+                </div>
+                <div class="col">
+                    <label for="addGroup" class="form-label">&nbsp;</label>
+                    <button type="submit" class="btn d-block form-control btn-primary" id="addGroup">
+                        <i class="bi bi-plus-lg me-1"></i>Agregar
+                    </button>
+                </div>
+            </div>
+        </form>
+        <div class="row pt-3 pb-3">
+            <div class="col">
+                <i class="bi bi-info-circle"></i> Agrega varios pokemones a la base de datos desde PokeApi.
+            </div>
+        </div>
+    </div>
+    <div class="container border mt-5 border-secundary rounded">
+        <div class="row">
+            <div class="col pt-1 pb-1 bg-primary fw-semibold rounded-top">Eliminar</div>
+        </div>
+        <form th:action="@{/pokemon/deleteGroup}" method="post" id="formDeleteGroup">
+            <div class="row pt-3 pb-3">
+                <div class="col">
+                    <label for="deleteGroupStart" class="form-label">Desde</label>
+                    <input type="text" class="form-control" name="deleteGroupStart" id="deleteGroupStart">
+                </div>
+                <div class="col">
+                    <label for="deleteGroupEnd" class="form-label">Hasta</label>
+                    <input type="text" class="form-control" name="deleteGroupEnd" id="deleteGroupEnd">
+                </div>
+                <div class="col">
+                    <label for="deleteGroup" class="form-label">&nbsp;</label>
+                    <button type="submit" class="btn d-block form-control btn-primary" id="deleteGroup">
+                        <i class="bi bi-dash-lg me-1"></i>Eliminar
+                    </button>
+                </div>
+            </div>
+        </form>
+        <div class="row pt-3 pb-3">
+            <div class="col">
+                <i class="bi bi-info-circle"></i> Elimina varios pokemones de la base de datos.
+            </div>
+        </div>
+    </div>
+    <div class="container">
+    <div class="row">    
+    <div class="container col border me-2 mt-5 border-secundary rounded">
+        <div class="row">
+            <div class="col pt-1 pb-1 bg-primary fw-semibold rounded-top">Agregar</div>
+        </div>
+        <form th:action="@{/addSpecific}" method="post" id="formAddSpecific">
+            <div class="row pt-3 pb-3">
+                <div class="col">
+                    <label for="addSpecificId" class="form-label">ID</label>
+                    <input type="text" class="form-control" name="addSpecificId" id="addSpecificId">
+                </div>
+                <div class="col">
+                    <label for="addSpecificName" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" name="addSpecificName" id="addSpecificName">
+                </div>
+                <div class="col">
+                    <label for="addSpecific" class="form-label">&nbsp;</label>
+                    <button type="submit" class="btn d-block form-control btn-primary" id="addSpecific">
+                        <i class="bi bi-plus-lg me-1"></i>Agregar
+                    </button>
+                </div>
+            </div>
+        </form>
+        <div class="row pt-3 pb-3">
+            <div class="col">
+                <i class="bi bi-info-circle"></i> Agrega un pokemon especifico a la base de datos desde PokeApi.
+            </div>
+        </div>
+    </div>
+    <div class="container col border ms-2 mt-5 border-secundary rounded">
+        <div class="row">
+            <div class="col pt-1 pb-1 bg-primary fw-semibold rounded-top">Eliminar</div>
+        </div>
+        <form th:action="@{/deleteSpecific}" method="post" id="formDeleteSpecific">
+            <div class="row pt-3 pb-3">
+                <div class="col">
+                    <label for="deleteSpecificId" class="form-label">ID</label>
+                    <input type="text" class="form-control" name="deleteSpecificId" id="deleteSpecificId">
+                </div>
+                <div class="col">
+                    <label for="deleteSpecificName" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" name="deleteSpecificName" id="deleteSpecificName">
+                </div>
+                <div class="col">
+                    <label for="deleteSpecific" class="form-label">&nbsp;</label>
+                    <button type="submit" class="btn d-block form-control btn-primary" id="deleteSpecific">
+                        <i class="bi bi-dash-lg me-1"></i>Eliminar
+                    </button>
+                </div>
+            </div>
+        </form>
+        <div class="row pt-3 pb-3">
+            <div class="col">
+                <i class="bi bi-info-circle"></i> Elimina un pokemon especifico de la base de datos.
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

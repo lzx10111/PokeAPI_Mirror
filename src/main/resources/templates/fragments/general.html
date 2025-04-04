@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div class="modal" id="profileModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        
+    </div>
+</div>
+  <div th:fragment="navbar (isAdmin, isUser)">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">PokeApi</span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li th:if="${#bools.isTrue(isUser)}">
+              <div class="vr h-100"></div>
+            </li>
+            <li th:if="${#bools.isTrue(isUser)}" class="nav-item">
+              <a class="nav-link" href="/index">Lista</a>
+            </li>
+            <li th:if="${#bools.isTrue(isAdmin)}">
+              <div class="vr h-100"></div>
+            </li>
+            <li th:if="${#bools.isTrue(isAdmin)}" class="nav-item">
+              <a class="nav-link" href="/user/edition">Edición</a>
+            </li>
+            <li th:if="${#bools.isTrue(isUser)}">
+              <div class="vr h-100"></div>
+            </li>
+            <li th:if="${#bools.isTrue(isUser)}" class="nav-item">
+              <a class="nav-link" href="/user/profile">Perfil</a>
+            </li>
+            <li th:if="${#bools.isTrue(isUser)}">
+              <div class="vr h-100"></div>
+            </li>
+            <li th:if="${#bools.isTrue(isUser)}" class="nav-item">
+              <form action="/logout" method="post" class="align-middle">
+                <input type="submit" class="nav-link" value="Cerrar Sesion">
+                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div th:fragment="footer">
+    <footer class="container border mt-4 mb-4 justify-content-center justify-content-lg-start border-secundary rounded">
+      <p class="mt-4 mb-4">Autor: Jean<br>
+        <a href="mailto:example@example.com">example@example.com</a></p>
+    </footer>
+  </div>
+</body>
+</html>

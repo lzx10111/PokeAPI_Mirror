@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:fragment="modalContentSuccessMsg (msg)">
+        <div class="modal-header">
+            <h5 class="modal-title">
+                Informacion...
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div th:text="${msg}"></div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+    </div>
+    <div th:fragment="modalContentErrorMsg (field, binding)">
+        <div class="modal-header">
+            <h5 th:text="|Error (${field})|" class="modal-title"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+<!--                <ul th:each="e : ${#lists.toList(errorMsgList)}">-->
+<!--                    <li th:text="${#strings.toString(e)}"></li>-->
+<!--                </ul>-->
+                <ul th:each="j : ${binding.getFieldErrors(field)}">
+                    <li th:text="${j.getDefaultMessage()}"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+    </div>
+    <div th:fragment="modalContentLoader">
+        <div class="modal-header">
+            <h5 class="modal-title">
+                Procesando...
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <div class="loader mx-auto"></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer"></div>
+    </div>
+    <div th:fragment="modalContentName (userModify)">
+        <div class="modal-header">
+            <h5 class="modal-title">Cambiar nombre</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <label for="inputName" class="col-5 col-form-label">Nuevo Nombre:</label>
+                <div class="col-5">
+                    <input type="text" class="form-control" form="formModifyName" name="name" id="inputName">
+                    <div class="invalid-feedback">
+                        El nombre debe tener como mínimo 2 caracteres y como máximo 20 caracteres (solo letras).
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <form th:action="@{/user/profileModify}" th:object="${userModify}" method="post" id="formModifyName">
+                <button type="submit" class="btn btn-primary" id="buttonSave">Guardar cambios</button>
+            </form>
+        </div>
+    </div>
+    <div th:fragment="modalContentEmail (userModify)">
+        <div class="modal-header">
+            <h5 class="modal-title">Cambiar email</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <label for="inputEmail" class="col-5 col-form-label">Nuevo Email:</label>
+                <div class="col-5">
+                    <input type="email" class="form-control" form="formModifyEmail" name="email" id="inputEmail">
+                    <div class="invalid-feedback">
+                        El correo electrónico debe de tener un formato correcto (Ej: correo123@correo.com).
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <form th:action="@{/user/profileModify}" th:object="${userModify}" method="post" id="formModifyEmail">
+                <button type="submit" class="btn btn-primary">Guardar cambios</button>
+            </form>
+        </div>
+    </div>
+    <div th:fragment="modalContentDateBirth (userModify)">
+        <div class="modal-header">
+            <h5 class="modal-title">Cambiar fecha de nacimiento</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <label for="inputDateBirth" class="col-5 col-form-label">Nuevo Fecha:</label>
+                <div class="col-5">
+                    <input type="date" class="form-control" form="formModifyDateBirth" name="dateBirthInput" id="inputDateBirth"
+                           min="1900-01-01" value="1900-01-01">
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <form th:action="@{/user/profileModify}" th:object="${userModify}" method="post" id="formModifyDateBirth">
+                <button type="submit" class="btn btn-primary">Guardar cambios</button>
+            </form>
+        </div>
+    </div>
+    <div th:fragment="modalContentPassword (userModify)">
+        <div class="modal-header">
+            <h5 class="modal-title">Cambiar contraseña</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row mb-3">
+                <label for="inputPassword" class="col-5 col-form-label">Nueva Contraseña:</label>
+                <div class="col-5">
+                    <input type="password" class="form-control" form="formModifyPassword" name="passwordInput" id="inputPassword">
+                    <div class="invalid-feedback">
+                        La contraseña debe tener como mínimo 3 caracteres y como máximo 20 caracteres (solo letras y números).
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <label for="inputRepeatPassword" class="col-5 col-form-label">Repetir Contraseña:</label>
+                <div class="col-5">
+                    <input type="password" class="form-control" form="formModifyPassword" name="inputRepeatPassword" id="inputRepeatPassword">
+                    <div class="invalid-feedback">
+                        Las contraseñas no coinciden.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <form th:action="@{/user/profileModify}" th:object="${userModify}" method="post" id="formModifyPassword">
+                <button type="submit" class="btn btn-primary">Guardar cambios</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

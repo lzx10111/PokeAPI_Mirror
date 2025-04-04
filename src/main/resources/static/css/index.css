@@ -1,0 +1,30 @@
+.hr {
+    height: 1px;
+    margin: 0.5rem 0;
+    color: #c1c3c4;
+    background-color: #c1c3c4;
+    border: 0;
+    opacity: 0.25;
+}
+
+@media(min-width:1200px) {
+
+}
+
+@media(min-width:992px) and (max-width:1199px) {
+
+}
+
+@media(min-width:768px) and (max-width:991px) {
+
+}
+
+@media(min-width:576px) and (max-width:767px) {
+
+}
+
+@media(max-width:575px) {
+    #labelMultiplier {
+        font-size: 5vw;
+    }
+}
