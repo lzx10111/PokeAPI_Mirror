@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="_csrf" th:content="${_csrf.token}"/>
   <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -12,17 +13,18 @@
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <link th:href="@{/css/info.css}" rel="stylesheet">
   <script th:src="@{/js/info.js}"></script>
   <title th:text="|${pokemon.name.substring(0,1).toUpperCase()}${pokemon.name.substring(1).toLowerCase()}|"></title>
 </head>
 
 <body>
 <div th:replace="~{fragments/general.html :: navbar (isAdmin=${isAdmin}, isUser=${isUser})}"></div>
-  <div class="container border mt-4 mb-4 border-secundary rounded">
+  <div class="container border my-4 border-secundary rounded" id="containerInfo">
     <div class="row">
       <h1 class="text-center p-5" th:text="|${pokemon.name.substring(0,1).toUpperCase()}${pokemon.name.substring(1).toLowerCase()}|"></h1>
     </div>
-    <div class="container justify-content-center border border-secundary rounded mb-5 w-50">
+    <div class="container containerInfoElement justify-content-center border border-secundary rounded mb-5">
       <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
           <div th:if="${!pokemon.sprites.other.official_artwork.front_default.isEmpty()}" class="carousel-item active">
@@ -42,20 +44,19 @@
         </button>
       </div>
     </div>
-    <div class="container justify-content-center border border-secundary rounded mb-5 w-50 pt-3 pb-3">
+    <div class="container containerInfoElement justify-content-center border border-secundary rounded mb-5 py-3">
       <div class="favorite text-center fs-3">
         <i class="bi" th:classappend="${pokemon.containsId(userFavorites)} ? 'bi-star-fill' : 'bi-star'"></i>
         <input type="hidden" th:value="${pokemon.id}">
         <span th:text="| ${count}|"></span>
       </div>
     </div>
-    <div class="container justify-content-center border border-secundary rounded mb-5 w-50">
+    <div class="container containerInfoElement justify-content-center border border-secundary rounded mb-5">
       <h1 class="text-center p-5">Habilidades</h1>
       <ul class="fs-3 pb-5 ps-0" style="text-align: center; list-style-position: inside;">
         <li th:each="i : ${pokemon.abilities}" th:text="${i.ability.name}"></li>
       </ul>
     </div>
-    
   </div>
 </body>
 
