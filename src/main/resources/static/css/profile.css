@@ -1,0 +1,34 @@
+@media(min-width:1200px) {
+    #containerProfile {
+        width: 75%;
+        text-align: left;
+    }
+}
+
+@media(min-width:992px) and (max-width:1199px) {
+    #containerProfile {
+        width: 75%;
+        text-align: left;
+    }
+}
+
+@media(min-width:768px) and (max-width:991px) {
+    #containerProfile {
+        width: calc(100% - 1.5rem * 2);
+        text-align: center;
+    }
+}
+
+@media(min-width:576px) and (max-width:767px) {
+    #containerProfile {
+        width: calc(100% - 1.5rem * 2);
+        text-align: center;
+    }
+}
+
+@media(max-width:575px) {
+    #containerProfile {
+        width: calc(100% - 1.5rem * 2);
+        text-align: center;
+    }
+}
