@@ -10,3 +10,8 @@ Una sencilla aplicacion web basada en PokemonAPI hecha en JAVA con el framework 
      - Creando las tablas en MySQL
 2. SpringBoot
    - Creando la base de datos con SpringBoot
+
+## Creando el esquema en MySQL
+```sql
+CREATE SCHEMA `bd_test` ;
+```
