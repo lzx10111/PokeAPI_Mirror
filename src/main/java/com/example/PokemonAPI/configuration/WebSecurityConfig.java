@@ -40,6 +40,7 @@ public class WebSecurityConfig {
 
         return http.authorizeHttpRequests(authz -> authz
                         .requestMatchers("/css/login.css").permitAll()
+                        .requestMatchers("/css/register.css").permitAll()
                         .requestMatchers("/register").permitAll()
                         .requestMatchers("/index").hasRole("USER")
                         .requestMatchers("/filter").hasRole("USER")
