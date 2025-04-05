@@ -1,0 +1,29 @@
+@media(min-width:1200px) {
+    #containerLogin {
+        width: 50%;
+    }
+}
+
+@media(min-width:992px) and (max-width:1199px) {
+    #containerLogin {
+        width: 50%;
+    }
+}
+
+@media(min-width:768px) and (max-width:991px) {
+    #containerLogin {
+        width: calc(100% - 1.5rem * 2);
+    }
+}
+
+@media(min-width:576px) and (max-width:767px) {
+    #containerLogin {
+        width: calc(100% - 1.5rem * 2);
+    }
+}
+
+@media(max-width:575px) {
+    #containerLogin {
+        width: calc(100% - 1.5rem * 2);
+    }
+}
