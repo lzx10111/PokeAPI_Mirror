@@ -15,3 +15,4 @@ Una sencilla aplicacion web basada en PokemonAPI hecha en JAVA con el framework 
 ```sql
 CREATE SCHEMA `bd_pokemon`;
 ```
+##Creando las tablas en MySQL
