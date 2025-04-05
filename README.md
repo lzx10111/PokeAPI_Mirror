@@ -11,8 +11,8 @@ Una sencilla aplicacion web basada en PokemonAPI hecha en JAVA con el framework 
 2. SpringBoot
    - Creando la base de datos con SpringBoot
 
-## Creando el esquema en MySQL
+## Creando el esquema en MySQL<br/>
 ```sql
 CREATE SCHEMA `bd_pokemon`;
 ```
-## Creando las tablas en MySQL
+## Creando las tablas en MySQL<br/>
