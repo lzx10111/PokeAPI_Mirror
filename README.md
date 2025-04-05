@@ -1,8 +1,7 @@
 # PokemonAPI Mirror
 
 Una sencilla aplicacion web basada en PokemonAPI hecha en JAVA con el framework SpringBoot
-
-
+<br/>
 ## Tabla de contenidos
 
 1. MySQL
