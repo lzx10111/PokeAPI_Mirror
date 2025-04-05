@@ -1,6 +1,6 @@
 # PokemonAPI Mirror
 
-Una sencilla aplicacion web basada en PokemonAPI hecha en JAVA con el framework SpringBoot
+Una sencilla aplicacion web basada en PokemonAPI hecha en JAVA con el framework SpringBoot<br/>
 <br/>
 ## Tabla de contenidos (En construcción...)
 
