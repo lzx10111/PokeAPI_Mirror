@@ -39,6 +39,7 @@ public class WebSecurityConfig {
 //        http.logout(logout -> logout.logoutSuccessUrl("/index").permitAll());
 
         return http.authorizeHttpRequests(authz -> authz
+                        .requestMatchers("/css/login.css").permitAll()
                         .requestMatchers("/register").permitAll()
                         .requestMatchers("/index").hasRole("USER")
                         .requestMatchers("/filter").hasRole("USER")
