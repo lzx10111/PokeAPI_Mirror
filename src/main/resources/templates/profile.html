@@ -24,36 +24,36 @@
         </div>
     </div>
     <div th:replace="~{fragments/general.html :: navbar (isAdmin=${isAdmin}, isUser=${isUser})}"></div>
-    <div class="container mx-4 mx-lg-auto mt-4 border border-secundary rounded" id="containerProfile">
+    <div class="container mt-4 border border-secundary rounded" id="containerProfile">
         <div class="row mb-3">
             <div class="col pt-1 pb-1 bg-primary fw-semibold rounded-top">Modificar Usuario</div>
         </div>
         <div class="row mb-3 px-3 ps-lg-2 pe-lg-4">
             <label for="labelUserName" class="col-12 col-lg-5 col-form-label">Nombre de usuario:</label>
-            <label th:text="${user.username}" class="col-12 col-lg-5 col-form-label" id="labelUserName"></label>
+            <label th:text="${user.username}" class="col-12 col-lg-5 mt-2 mt-lg-0 col-form-label" id="labelUserName"></label>
         </div>
         <hr>
         <div class="row mb-3 px-3 ps-lg-2 pe-lg-4">
             <label for="labelName" class="col-12 col-lg-5 col-form-label">Nombre:</label>
-            <label th:text="${user.name}" class="col-12 col-lg-5 col-form-label" id="labelName"></label>
+            <label th:text="${user.name}" class="col-12 col-lg-5 mt-2 mt-lg-0 col-form-label" id="labelName"></label>
             <button type="button" class="col-12 col-lg-2 my-3 btn btn-primary" id="modifyName">Cambiar <i class="bi bi-pencil-square"></i></button>
         </div>
         <hr>
         <div class="row mb-3 px-3 ps-lg-2 pe-lg-4">
             <label for="labelEmail" class="col-12 col-lg-5 col-form-label">Correo electrónico:</label>
-            <label th:text="${user.email}" class="col-12 col-lg-5 col-form-label" id="labelEmail"></label>
+            <label th:text="${user.email}" class="col-12 col-lg-5 mt-2 mt-lg-0 col-form-label" id="labelEmail"></label>
             <button type="submit" class="col-12 col-lg-2 my-3 btn btn-primary" id="modifyEmail">Cambiar <i class="bi bi-pencil-square"></i></button>
         </div>
         <hr>
         <div class="row mb-3 px-3 ps-lg-2 pe-lg-4">
             <label for="labelDateBirth" class="col-12 col-lg-5 col-form-label">Fecha de Nacimiento:</label>
-            <label th:text="${user.dateBirth}" class="col-12 col-lg-5 col-form-label" id="labelDateBirth"></label>
+            <label th:text="${user.dateBirth}" class="col-12 col-lg-5 mt-2 mt-lg-0 col-form-label" id="labelDateBirth"></label>
             <button type="submit" class="col-12 col-lg-2 my-3 btn btn-primary" id="modifyDateBirth">Cambiar <i class="bi bi-pencil-square"></i></button>
         </div>
         <hr>
         <div class="row mb-3 px-3 ps-lg-2 pe-lg-4">
             <label for="labelPassword" class="col-12 col-lg-5 col-form-label">Contraseña:</label>
-            <label class="col-12 col-lg-5 col-form-label" id="labelPassword"></label>
+            <label class="col-12 col-lg-5 mt-2 mt-lg-0 col-form-label" id="labelPassword"></label>
             <button type="submit" class="col-12 col-lg-2 my-3 btn btn-primary" id="modifyPassword">Cambiar <i class="bi bi-pencil-square"></i></button>
         </div>
     </div>
