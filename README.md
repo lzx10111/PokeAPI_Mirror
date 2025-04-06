@@ -12,7 +12,9 @@ Una sencilla aplicacion web basada en PokemonAPI hecha en JAVA con el framework 
    - Creando la base de datos con SpringBoot
 
 ## Creando el esquema en MySQL<br/>
+La parte mas simple de esta seccion... solo se necesita un nombre para el esquema en este caso lo llamare **bd_pokemon**.
 ```sql
 CREATE SCHEMA `bd_pokemon`;
 ```
+MySQL no tiene una convencion de nomenclatura asi que yo usare mi propia logica...
 ## Creando las tablas en MySQL<br/>
