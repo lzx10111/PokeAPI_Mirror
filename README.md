@@ -17,4 +17,5 @@ La parte mas simple de esta seccion... solo se necesita un nombre para el esquem
 CREATE SCHEMA `bd_pokemon`;
 ```
 MySQL no tiene una convencion de nomenclatura asi que yo usare mi propia logica...
+Lo importante es la consistencia por ejemplo yo empiezo los nombre de mis esquemas con **bd_** donde **bd** es de base de datos.
 ## Creando las tablas en MySQL<br/>
