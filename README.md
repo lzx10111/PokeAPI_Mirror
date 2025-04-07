@@ -33,17 +33,7 @@ Para esta aplicacion web solo usaremos un limitado rango de valores del objeto j
 - pokemon
 - sprites
 
-```sql
-CREATE TABLE `abilities` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `is_hidden` bit(1) NOT NULL,
-  `slot` int NOT NULL,
-  `pokemon_id` int NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `IDX_abilities_pokemon_id` (`pokemon_id`),
-  CONSTRAINT `FK_abilities_pokemon` FOREIGN KEY (`pokemon_id`) REFERENCES `pokemon` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-```
+Estos seran tambien los nombres de las tablas  
 
 
 
