@@ -22,7 +22,7 @@ public class PokemonController {
     }
 
     @GetMapping("/info")
-    public String info(@RequestParam("idInfo") Long id, Model model) {
+    public String info(@RequestParam("idInfo") Integer id, Model model) {
         model.addAttribute("isAdmin", userService.isAdmin());
         model.addAttribute("isUser", userService.isUser());
         model.addAttribute("pokemon", pokemonService.getPokemonByID(id));
