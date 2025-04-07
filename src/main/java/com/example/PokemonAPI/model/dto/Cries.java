@@ -6,7 +6,6 @@ import jakarta.persistence.*;
 @Entity
 public class Cries {
 
-//    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
