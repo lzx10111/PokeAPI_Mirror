@@ -21,7 +21,7 @@ public class PokemonSpecifications {
                 return criteriaBuilder.conjunction();
             }
 
-            return criteriaBuilder.equal(root.get("id"), Long.parseLong(id));
+            return criteriaBuilder.equal(root.get("id"), Integer.parseInt(id));
         };
     }
 
@@ -39,7 +39,7 @@ public class PokemonSpecifications {
                 return criteriaBuilder.conjunction();
             }
 
-            return criteriaBuilder.greaterThanOrEqualTo(root.get("id"), Long.parseLong(id));
+            return criteriaBuilder.greaterThanOrEqualTo(root.get("id"), Integer.parseInt(id));
         };
     }
 
@@ -49,7 +49,7 @@ public class PokemonSpecifications {
                 return criteriaBuilder.conjunction();
             }
 
-            return criteriaBuilder.lessThanOrEqualTo(root.get("id"), Long.parseLong(id));
+            return criteriaBuilder.lessThanOrEqualTo(root.get("id"), Integer.parseInt(id));
         };
     }
 }
