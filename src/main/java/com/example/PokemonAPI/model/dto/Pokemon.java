@@ -13,7 +13,7 @@ public class Pokemon {
 
     @Id
     @Column
-    private Long id;
+    private Integer id;
 
     @Column
     private Integer height;
@@ -36,7 +36,7 @@ public class Pokemon {
     @OneToOne(mappedBy = "pokemon", cascade = CascadeType.ALL)
     private Sprites sprites;
 
-    public Pokemon(String name, Long id, Integer height, Integer weight, Integer base_experience, List<Abilities> abilities, Cries cries, Sprites sprites) {
+    public Pokemon(String name, Integer id, Integer height, Integer weight, Integer base_experience, List<Abilities> abilities, Cries cries, Sprites sprites) {
         this.name = name;
         this.id = id;
         this.height = height;
@@ -47,7 +47,7 @@ public class Pokemon {
         this.sprites = sprites;
     }
 
-    public Pokemon(Long id) {
+    public Pokemon(Integer id) {
         this.id = id;
     }
 
@@ -115,11 +115,11 @@ public class Pokemon {
         this.height = height;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
