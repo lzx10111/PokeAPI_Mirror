@@ -8,5 +8,5 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface FavoriteRepository extends JpaRepository<Favorite, FavoriteId>, JpaSpecificationExecutor<Favorite> {
     @Query("SELECT COUNT(f) FROM Favorite f WHERE f.id.pokemonId=?1")
-    long totalFavoritePokemonCount(Long pokemonId);
+    int totalFavoritePokemonCount(Integer pokemonId);
 }
