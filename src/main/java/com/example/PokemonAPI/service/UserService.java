@@ -50,7 +50,7 @@ public class UserService implements UserDetailsService {
 
         User user = userRepository.findByUsername(username);
 
-        return favoriteRepository.findAll(where(idLike(Long.toString(user.getId()))));
+        return favoriteRepository.findAll(where(idLike(Integer.toString(user.getId()))));
     }
 
     public User emptyUser() {
@@ -100,7 +100,7 @@ public class UserService implements UserDetailsService {
         return userRepository.findByUsername(username);
     }
 
-    public Long getTotalFavoritePokemonCount(Long pokemonId) {
+    public Integer getTotalFavoritePokemonCount(Integer pokemonId) {
         return favoriteRepository.totalFavoritePokemonCount(pokemonId);
     }
 
