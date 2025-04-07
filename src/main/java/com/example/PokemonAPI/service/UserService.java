@@ -61,7 +61,8 @@ public class UserService implements UserDetailsService {
         List<Role> roles = new ArrayList<>();
         roles.add(Role.ROLE_USER);
 
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setPassword(passwordEncoder.encode(user.getPasswordInput()));
+        user.setDateBirth(Date.valueOf(user.getDateBirthInput()));
         user.setDateCreated(new Date(System.currentTimeMillis()));
         user.setRoles(roles);
         userRepository.save(user);
