@@ -9,8 +9,6 @@ Una sencilla aplicacion web basada en PokeAPI hecha en JAVA con el framework Spr
      - Creando el esquema en MySQL
      - Creando las tablas en MySQL
        - Para PokeAPI
-         - Analizando los recursos de PokeAPI
-         - Las partes que se utilizaran de estos recursos
        - Para Usuarios
 2. SpringBoot
    - Creando la base de datos con SpringBoot
@@ -25,6 +23,17 @@ Lo importante es la consistencia por ejemplo yo empiezo los nombre de mis esquem
 ## Creando las tablas en MySQL<br/>
 
 ### Para PokeAPI
+Para esta aplicacion web solo usaremos un limitado rango de valores del objeto json que nos da PokeAPI especificamente los siguientes:
 
-#### Analizando los recursos de PokeAPI
+- abilities
+- ability
+- cries
+- official_art_work
+- other
+- sprites
+
+
+
+
+
 
