@@ -7,29 +7,29 @@ import java.util.Objects;
 @Embeddable
 public class FavoriteId implements Serializable {
 
-    private Long userId;
-    private Long pokemonId;
+    private Integer userId;
+    private Integer pokemonId;
 
-    public FavoriteId(Long userId, Long pokemonId) {
+    public FavoriteId(Integer userId, Integer pokemonId) {
         this.userId = userId;
         this.pokemonId = pokemonId;
     }
 
     public FavoriteId() {}
 
-    public Long getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
-    public Long getPokemonId() {
+    public Integer getPokemonId() {
         return pokemonId;
     }
 
-    public void setPokemonId(Long pokemonId) {
+    public void setPokemonId(Integer pokemonId) {
         this.pokemonId = pokemonId;
     }
 
