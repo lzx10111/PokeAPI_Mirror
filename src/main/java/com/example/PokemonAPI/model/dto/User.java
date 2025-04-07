@@ -14,7 +14,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
-    private Long id;
+    private Integer id;
 
     @NotBlank(message = "{name.required}")
     @Pattern(regexp = "[a-zA-Z]{2,20}", message = "{name.pattern}")
@@ -57,7 +57,7 @@ public class User {
     @DateHtml(message = "{dateBirthInput.pattern}")
     private String dateBirthInput;
 
-    public User(Long id, String name, String username, String password, String email, Date dateBirth, Date dateCreated, List<Role> roles, String passwordInput, String dateBirthInput) {
+    public User(Integer id, String name, String username, String password, String email, Date dateBirth, Date dateCreated, List<Role> roles, String passwordInput, String dateBirthInput) {
         this.id = id;
         this.name = name;
         this.username = username;
@@ -70,7 +70,7 @@ public class User {
         this.dateBirthInput = dateBirthInput;
     }
 
-    public User(Long id, String name, String username, String password, String email, Date dateBirth, Date dateCreated, List<Role> roles) {
+    public User(Integer id, String name, String username, String password, String email, Date dateBirth, Date dateCreated, List<Role> roles) {
         this.id = id;
         this.name = name;
         this.username = username;
@@ -84,11 +84,11 @@ public class User {
     public User() {
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
