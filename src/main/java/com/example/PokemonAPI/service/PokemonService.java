@@ -122,7 +122,7 @@ public class PokemonService {
                 and(weightLike(searchPokemon.getWeightFilter()))));
     }
 
-    public Pokemon getPokemonByID(Long id) {
+    public Pokemon getPokemonByID(Integer id) {
         Optional<Pokemon> pokemon = pokemonRepository.findById(id);
 
         return pokemon.orElse(new Pokemon());
@@ -148,7 +148,7 @@ public class PokemonService {
     }
 
     public void deletePokemonWithId(String id) {
-        pokemonRepository.deleteById(Long.valueOf(id));
+        pokemonRepository.deleteById(Integer.valueOf(id));
     }
 
     public void deletePokemonWithName(String name) {
