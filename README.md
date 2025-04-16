@@ -33,7 +33,7 @@ Algunos criterios que utilize para la creacion de la base de datos
   - **CHECK KEY**: CHK_TableName_ColumnName
 
 ### Para PokeAPI
-Para esta aplicacion web solo usaremos un limitado rango de valores del objeto json que nos da PokeAPI especificamente los siguientes:
+Para esta aplicacion web solo usaremos un limitado rango de valores del objeto JSON que nos da PokeAPI especificamente los siguientes:
 
 - abilities
 - ability
