@@ -24,7 +24,7 @@ Lo importante es la consistencia por ejemplo yo empiezo los nombre de mis esquem
 Algunos criterios que utilize para la creacion de la base de datos
 - Los nombres de las tablas estaran en singular y en minuscula.
 - Todas las columnas con datos numericos seran:
-  - **int**: Para esta aplicacion es mas que suficiente.
+  - **int**: Para esta aplicacion es mas que suficiente el rango que nos brinda este tipo de dato.
   - **SIGNED** (default): En esta aplicacion solo utilizaremos numeros positivos por lo que podria usar **UNSIGNED** pero lei que colocar columnas con **UNSIGNED** provoca complicaciones si se quiere emigrar la base de datos.
 
 ### Para PokeAPI
