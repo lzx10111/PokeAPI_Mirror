@@ -26,7 +26,7 @@ Algunos criterios que utilize para la creacion de la base de datos
 - Todas las columnas con datos numericos seran:
   - **int**: Para esta aplicacion es mas que suficiente el rango que nos brinda este tipo de dato.
   - **SIGNED** (default): En esta aplicacion solo utilizaremos numeros positivos por lo que podria usar **UNSIGNED** pero lei que colocar columnas con **UNSIGNED** provoca complicaciones si se quiere emigrar la base de datos.
-- Las **CONSTRAINT** tendran una forma de llamarse especifica dependiendo de cual sea la **CONSTRAINT**. En el caso esta aplicacion sera de la siguiente forma.
+- Las **CONSTRAINT** tendran una forma de llamarse especifica dependiendo de cual sea la **CONSTRAINT**. En el caso esta aplicacion sera de la siguiente forma.<br/>
   - **FOREIGN KEY**: FK_TableName_TableSource
   - **UNIQUE KEY**: UK_TableName_ColumnName
   - **INDEX KEY**: IDX_TableName_ColumnName
