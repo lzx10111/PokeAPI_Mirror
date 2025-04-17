@@ -68,7 +68,7 @@ Reemplazando quedaria de la siguiente manera...
 spring.datasource.url=jdbc:mysql://localhost:3306/bd_pokemon?serverTimezone=America/Santiago
 ```
 
-<ins><h4>Username</h4></ins>
+<u><h4>Username</h4></u>
 
 ```
 spring.datasource.username=username
