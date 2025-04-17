@@ -52,7 +52,7 @@ Estos seran tambien los nombres de las tablas
 
 ### Configurando la conexion a la base de datos
 
-Esto se puede hacer con una clase de java o en el archivo 
+Esto se puede hacer con una clase de java o en el archivo [application.properties](src/main/resources/application.properties)
 
 
 
