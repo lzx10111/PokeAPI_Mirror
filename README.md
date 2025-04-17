@@ -54,7 +54,7 @@ Estos seran tambien los nombres de las tablas
 
 Esto se puede hacer con una clase de java o en el archivo [application.properties](src/main/resources/application.properties). En mi caso usaré el archivo porque lo encuentro más fácil e intuitivo.
 
-<ins>#### Url</ins>
+<ins><h4>Url</h4></ins>
 
 ```
 spring.datasource.url=jdbc:mysql://localhost:port/databasename?serverTimezone=timezone
@@ -68,7 +68,7 @@ Reemplazando quedaria de la siguiente manera...
 spring.datasource.url=jdbc:mysql://localhost:3306/bd_pokemon?serverTimezone=America/Santiago
 ```
 
-<ins><h1>Username</h1></ins>
+<ins><h4>Username</h4></ins>
 
 ```
 spring.datasource.username=username
@@ -79,7 +79,7 @@ spring.datasource.username=username
 spring.datasource.username=root
 ```
 
-<ins>#### Password</ins>
+<ins><h4>Password</h4></ins>
 
 ```
 spring.datasource.password=password
