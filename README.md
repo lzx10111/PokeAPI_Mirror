@@ -101,6 +101,8 @@ spring.datasource.driver-class-name=drivername
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 ```
 
+El resultado de todo esto se puede ver en el ya mencionado archivo [application.properties](src/main/resources/application.properties).
+
 
 
 
