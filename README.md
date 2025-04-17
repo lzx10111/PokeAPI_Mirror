@@ -59,9 +59,9 @@ Esto se puede hacer con una clase de java o en el archivo [application.propertie
 ```
 spring.datasource.url=jdbc:mysql://localhost:port/databasename?serverTimezone=timezone
 ```
-- port: El puerto que tiene la base de datos en este caso **3306**.
-- databasename: El nombre de la base de datos en este caso **bd_pokemon**.
-- timezone: El nombre de la base de datos en este caso **America/Santiago**.
+- port: El puerto que tiene la base de datos en este caso es **3306**.
+- databasename: El nombre de la base de datos en este caso es **bd_pokemon**.
+- timezone: La zona horaria que necesites en este caso es **America/Santiago**.
 
 Reemplazando quedaria de la siguiente manera...
 ```
@@ -73,7 +73,7 @@ spring.datasource.url=jdbc:mysql://localhost:3306/bd_pokemon?serverTimezone=Amer
 ```
 spring.datasource.username=username
 ```
-- username: El nombre de usuario que tiene la base de datos en este caso **root**.
+- username: El nombre de usuario que tiene la base de datos en este caso es **root**.
 
 ```
 spring.datasource.username=root
@@ -84,7 +84,7 @@ spring.datasource.username=root
 ```
 spring.datasource.password=password
 ```
-- password: El contraseña del usuario **root** que tiene la base de datos en este caso **admin**.
+- password: El contraseña del usuario **root** que tiene la base de datos en este caso es **admin**.
 
 ```
 spring.datasource.password=admin
@@ -95,7 +95,7 @@ spring.datasource.password=admin
 ```
 spring.datasource.driver-class-name=drivername
 ```
-- drivername: El nombre del driver en este caso **com.mysql.cj.jdbc.Driver**.
+- drivername: El nombre del driver en este caso es **com.mysql.cj.jdbc.Driver**.
 
 ```
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
