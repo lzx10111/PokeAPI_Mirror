@@ -128,7 +128,7 @@ public class Pokemon {
 ```
 ### La anotacion @Column
 
-Esta anotacion la colocaremos arriba de cada campo que represente una columna de la respectiva tabla para indicar que la clase es una entidad.
+Esta anotacion la colocaremos arriba de cada campo que represente una columna de la respectiva tabla.
 
 ```java
 @Entity
