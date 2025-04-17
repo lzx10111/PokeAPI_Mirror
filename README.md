@@ -54,10 +54,16 @@ Estos seran tambien los nombres de las tablas
 
 Esto se puede hacer con una clase de java o en el archivo [application.properties](src/main/resources/application.properties). En mi caso usaré el archivo porque lo encuentro más fácil e intuitivo.
 
+-Url
+
 ```
 spring.datasource.url=jdbc:mysql://localhost:port/databasename?serverTimezone=timezone
 ```
+port: El puerto que tiene la base de datos en este caso **3306**.
+databasename: El nombre de la base de datos en este caso **bd_pokemon**.
+timezone: El nombre de la base de datos en este caso **America/Santiago**.
 
+Reemplazando quedaria de la siguiente manera...
 ```
 spring.datasource.url=jdbc:mysql://localhost:3306/bd_pokemon?serverTimezone=America/Santiago
 ```
