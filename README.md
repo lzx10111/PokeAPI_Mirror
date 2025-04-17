@@ -14,6 +14,7 @@ Una sencilla aplicacion web basada en PokeAPI hecha en JAVA con el framework Spr
    - Creando la base de datos con SpringBoot
    - Configuracion Inicial
      - Configurando la conexion a la base de datos
+   - Creando las entidades
 
 ## Creando el esquema en MySQL<br/>
 La parte mas simple de esta seccion... solo se necesita un nombre para el esquema en este caso lo llamare **bd_pokemon**.
@@ -102,6 +103,10 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 ```
 
 El resultado de todo esto se puede ver en el ya mencionado archivo [application.properties](src/main/resources/application.properties).
+
+## Creando las entidades
+
+Una entidad es un objeto que representa una tabla en una base de datos relacional. Estas ayudan a transferir datos entre las capas de la aplicacion.
 
 
 
