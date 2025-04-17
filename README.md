@@ -108,13 +108,16 @@ El resultado de todo esto se puede ver en el ya mencionado archivo [application.
 
 Una entidad es un objeto que representa una tabla en una base de datos relacional. Estas ayudan a transferir datos entre las capas de la aplicacion.
 
+
 ### Porque usar una entidad en vez de un DTO?
 
 La razon radica en que una entidad puede contener logica mientras que un DTO no. Con logica nos referimos a que una entidad puede tener por ejemplo metodos para validacion pero un DTO no.
 
+
 ### Que es una anotacion?
 
 Una Anotación Java es una forma de añadir metadatos al código fuente Java que están disponibles para la aplicación en tiempo de ejecución o de compilación.
+
 
 ### La anotacion @Entity
 
