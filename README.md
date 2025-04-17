@@ -174,7 +174,20 @@ public class Pokemon {
    private Integer base_experience;
    }
 ```
-Cuando el campo tiene el mismo nombre que la columna entonces no es necesario colocar el parametro **name**. Esto se puede ver en la clase [Pokemon](src/main/java/com/example/PokemonAPI/model/dto/Pokemon.java).
+Cuando el campo tiene el mismo nombre que la columna entonces no es necesario colocar el parametro **name**. Esto se puede ver ejemplificado en la clase [Pokemon](src/main/java/com/example/PokemonAPI/model/dto/Pokemon.java).
 
+### La anotacion @Id
 
+Esta anotacion la colocaremos arriba del campo que represente la **PRIMARY KEY** en la respectiva tabla. En este caso el campo **id** representa a la clave primaria de la tabla **pokemon**.
+
+```java
+@Entity
+public class Pokemon {
+   @Id
+   @Column
+   private Integer id;
+
+   // El otro codigo no se muestra para darle protagonismo al campo id.
+   }
+```
 
