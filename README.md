@@ -123,8 +123,32 @@ Esta anotacion la colocaremos arriba de la clase para indicar que la clase es un
 ```java
 @Entity
 public class Pokemon {
-//el resto del codigo
+   //el resto del codigo
 }
 ```
+### La anotacion @Column
+
+Esta anotacion la colocaremos arriba de cada campo que represente una columna de la respectiva tabla para indicar que la clase es una entidad.
+
+```java
+@Entity
+public class Pokemon {
+   @Column
+   private Integer id;
+
+   @Column
+   private String name;
+   
+   @Column
+   private Integer height;
+   
+   @Column
+   private Integer weight;
+   
+   @Column
+   private Integer base_experience;
+   }
+```
+
 
 
