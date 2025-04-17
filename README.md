@@ -131,7 +131,7 @@ public class Pokemon {
 ```
 ### La anotacion @Column
 
-Esta anotacion la colocaremos arriba de cada campo que represente una columna de la respectiva tabla.
+Esta anotacion la colocaremos arriba de cada campo que represente una columna en la respectiva tabla.
 
 ```java
 @Entity
@@ -152,6 +152,29 @@ public class Pokemon {
    private Integer base_experience;
    }
 ```
+
+Se pueden especificar parametros para como el nombre de la columna.
+
+```java
+@Entity
+public class Pokemon {
+   @Column(name="id")
+   private Integer id;
+
+   @Column(name="name")
+   private String name;
+   
+   @Column(name="height")
+   private Integer height;
+   
+   @Column(name="weight")
+   private Integer weight;
+   
+   @Column(name="base_experience")
+   private Integer base_experience;
+   }
+```
+Cuando el campo tiene el mismo nombre que la columna entonces no es necesario colocar el parametro **name**. Esto se puede ver en la clase [Pokemon](src/main/java/com/example/PokemonAPI/model/dto/Pokemon.java).
 
 
 
