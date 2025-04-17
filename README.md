@@ -12,6 +12,8 @@ Una sencilla aplicacion web basada en PokeAPI hecha en JAVA con el framework Spr
        - Para Usuarios
 2. SpringBoot
    - Creando la base de datos con SpringBoot
+   - Configuracion Inicial
+     - Configurando la conexion a la base de datos
 
 ## Creando el esquema en MySQL<br/>
 La parte mas simple de esta seccion... solo se necesita un nombre para el esquema en este caso lo llamare **bd_pokemon**.
@@ -45,6 +47,12 @@ Para esta aplicacion web solo usaremos un limitado rango de valores del objeto J
 - sprites
 
 Estos seran tambien los nombres de las tablas  
+
+## Configuracion Inicial
+
+### Configurando la conexion a la base de datos
+
+Esto se puede hacer con una clase de java o en el archivo 
 
 
 
