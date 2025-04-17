@@ -129,6 +129,15 @@ public class Pokemon {
    //el resto del codigo
 }
 ```
+Tambien podemos especificar como se llama la tabla en la base de datos.
+
+```java
+@Entity(name="pokemon")
+public class Pokemon {
+   //el resto del codigo
+}
+```
+
 ### La anotacion @Column
 
 Esta anotacion la colocaremos arriba de cada campo que represente una columna en la respectiva tabla.
@@ -190,4 +199,3 @@ public class Pokemon {
    // El otro codigo no se muestra para darle protagonismo al campo id.
    }
 ```
-
