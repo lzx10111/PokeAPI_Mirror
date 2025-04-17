@@ -52,8 +52,15 @@ Estos seran tambien los nombres de las tablas
 
 ### Configurando la conexion a la base de datos
 
-Esto se puede hacer con una clase de java o en el archivo [application.properties](src/main/resources/application.properties)
+Esto se puede hacer con una clase de java o en el archivo [application.properties](src/main/resources/application.properties). En mi caso usaré el archivo porque lo encuentro más fácil e intuitivo.
 
+```
+spring.datasource.url=jdbc:mysql://localhost:port/databasename?serverTimezone=timezone
+```
+
+```
+spring.datasource.url=jdbc:mysql://localhost:3306/bd_pokemon?serverTimezone=America/Santiago
+```
 
 
 
