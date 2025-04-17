@@ -112,7 +112,19 @@ Una entidad es un objeto que representa una tabla en una base de datos relaciona
 
 La razon radica en que una entidad puede contener logica mientras que un DTO no. Con logica nos referimos a que una entidad puede tener por ejemplo metodos para validacion pero un DTO no.
 
+### Que es una anotacion?
 
+Una Anotación Java es una forma de añadir metadatos al código fuente Java que están disponibles para la aplicación en tiempo de ejecución o de compilación.
 
+### La anotacion @Entity
+
+Esta anotacion la colocaremos arriba de la clase para indicar que la clase es una entidad.
+
+```java
+@Entity
+public class Pokemon {
+//el resto del codigo
+}
+```
 
 
