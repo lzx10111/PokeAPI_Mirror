@@ -54,7 +54,7 @@ Estos seran tambien los nombres de las tablas
 
 Esto se puede hacer con una clase de java o en el archivo [application.properties](src/main/resources/application.properties). En mi caso usaré el archivo porque lo encuentro más fácil e intuitivo.
 
-####Url
+#### Url
 
 ```
 spring.datasource.url=jdbc:mysql://localhost:port/databasename?serverTimezone=timezone
