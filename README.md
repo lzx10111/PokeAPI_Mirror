@@ -68,6 +68,28 @@ Reemplazando quedaria de la siguiente manera...
 spring.datasource.url=jdbc:mysql://localhost:3306/bd_pokemon?serverTimezone=America/Santiago
 ```
 
+#### Username
+
+```
+spring.datasource.username=username
+```
+- username: El nombre de usuario que tiene la base de datos en este caso **root**.
+
+```
+spring.datasource.username=root
+```
+
+#### Password
+
+```
+spring.datasource.password=password
+```
+- password: El contraseña del usuario **root** que tiene la base de datos en este caso **admin**.
+
+```
+spring.datasource.password=admin
+```
+
 
 
 
