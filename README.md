@@ -129,10 +129,14 @@ public class Pokemon {
    //el resto del codigo
 }
 ```
+
+### La anotacion @Table
+
 Tambien podemos especificar como se llama la tabla en la base de datos.
 
 ```java
-@Entity(name="pokemon")
+@Entity
+@Table(name="pokemon")
 public class Pokemon {
    //el resto del codigo
 }
