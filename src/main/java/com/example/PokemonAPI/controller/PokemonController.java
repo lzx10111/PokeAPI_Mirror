@@ -34,7 +34,7 @@ public class PokemonController {
 
     @PostMapping("/pokemonCount")
     public ResponseEntity<String> pokemonCount(@RequestBody Favorite favorite) {
-        return new ResponseEntity<>(Long.toString(userService.getTotalFavoritePokemonCount(favorite.getId().getPokemonId())), HttpStatus.OK);
+        return new ResponseEntity<>(Long.toString(userService.getTotalFavoritePokemonCount(favorite.getPokemonId())), HttpStatus.OK);
     }
 
     @PostMapping("/addGroup")
