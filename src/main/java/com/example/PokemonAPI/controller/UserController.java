@@ -115,7 +115,7 @@ public class UserController {
 
     @PostMapping("/addFavorite")
     public ResponseEntity<String> addFavorite(@RequestBody Favorite favorite) {
-        favorite.getId().setUserId(userService.getUser().getId());
+        favorite.setUserId(userService.getUser().getId());
 
         if (userService.favoriteExists(favorite)) {
             userService.deleteFavorite(favorite);
