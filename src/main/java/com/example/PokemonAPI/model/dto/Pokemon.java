@@ -7,13 +7,12 @@ import java.util.List;
 
 @Entity
 public class Pokemon {
-
-    @Column
-    private String name;
-
     @Id
     @Column
     private Integer id;
+
+    @Column
+    private String name;
 
     @Column
     private Integer height;
@@ -124,7 +123,7 @@ public class Pokemon {
     }
 
     public boolean containsId(final List<Favorite> list){
-        return list.stream().anyMatch(o -> id.equals(o.getId().getPokemonId()));
+        return list.stream().anyMatch(o -> id.equals(o.getPokemonId()));
     }
 
     @Override
