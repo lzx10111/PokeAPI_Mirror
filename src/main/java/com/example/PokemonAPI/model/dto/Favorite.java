@@ -5,26 +5,37 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "favoritos")
+@IdClass(FavoriteId.class)
 public class Favorite {
-
-    @EmbeddedId
-    private FavoriteId id = new FavoriteId();
+    @Id
+    private Integer userId;
+    @Id
+    private Integer pokemonId;
 
     public Favorite() {
     }
 
-    public FavoriteId getId() {
-        return id;
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setId(FavoriteId id) {
-        this.id = id;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
+    public Integer getPokemonId() {
+        return pokemonId;
+    }
+
+    public void setPokemonId(Integer pokemonId) {
+        this.pokemonId = pokemonId;
     }
 
     @Override
     public String toString() {
         return "Favorite{" +
-                "id=" + id +
+                "userId=" + userId +
+                ", pokemonId=" + pokemonId +
                 '}';
     }
 }
