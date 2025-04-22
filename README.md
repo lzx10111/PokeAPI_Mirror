@@ -203,3 +203,23 @@ public class Pokemon {
    // El otro codigo no se muestra para darle protagonismo al campo id.
    }
 ```
+
+### La anotacion @IdClass
+
+Algunas veces se tiene mas de una **PRIMARY KEY** en la respectiva tabla. Para estos casos esta anotacion. Primero hay que crear una clase con los siguientes requisitos.
+
+- La clase debe ser **public**.
+- La clase debe tener un constructor default (sin argumentos).
+- La clase debe de tener los metodos equals() and hashCode().
+- La clase debe de implementar la interfaz **Serializable**.
+
+```java
+@Entity
+public class Pokemon {
+   @Id
+   @Column
+   private Integer id;
+
+   // El otro codigo no se muestra para darle protagonismo al campo id.
+   }
+```
