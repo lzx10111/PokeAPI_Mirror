@@ -1,6 +1,6 @@
 package com.example.PokemonAPI.controller;
 
-import com.example.PokemonAPI.model.dto.Favorite;
+import com.example.PokemonAPI.model.entity.Favorite;
 import com.example.PokemonAPI.service.PokemonService;
 import com.example.PokemonAPI.service.UserService;
 import org.springframework.http.HttpStatus;

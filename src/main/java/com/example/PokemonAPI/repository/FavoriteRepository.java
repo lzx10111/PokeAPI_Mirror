@@ -1,6 +1,6 @@
 package com.example.PokemonAPI.repository;
 
-import com.example.PokemonAPI.model.dto.Favorite;
+import com.example.PokemonAPI.model.entity.Favorite;
 import com.example.PokemonAPI.model.util.FavoriteId;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;

@@ -1,6 +1,6 @@
 package com.example.PokemonAPI.repository;
 
-import com.example.PokemonAPI.model.dto.User;
+import com.example.PokemonAPI.model.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

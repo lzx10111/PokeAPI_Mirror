@@ -1,7 +1,7 @@
 package com.example.PokemonAPI.repository;
 
-import com.example.PokemonAPI.model.dto.MaxMin;
-import com.example.PokemonAPI.model.dto.Pokemon;
+import com.example.PokemonAPI.model.entity.MaxMin;
+import com.example.PokemonAPI.model.entity.Pokemon;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;

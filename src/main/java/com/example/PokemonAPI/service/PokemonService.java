@@ -1,7 +1,7 @@
 package com.example.PokemonAPI.service;
 
-import com.example.PokemonAPI.model.dto.MaxMin;
-import com.example.PokemonAPI.model.dto.Pokemon;
+import com.example.PokemonAPI.model.entity.MaxMin;
+import com.example.PokemonAPI.model.entity.Pokemon;
 import com.example.PokemonAPI.model.pojo.SearchPokemon;
 import com.example.PokemonAPI.repository.PokemonRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;

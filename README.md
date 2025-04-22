@@ -187,7 +187,7 @@ public class Pokemon {
    private Integer base_experience;
    }
 ```
-Cuando el campo tiene el mismo nombre que la columna entonces no es necesario colocar el parametro **name**. Esto se puede ver ejemplificado en la clase [Pokemon](src/main/java/com/example/PokemonAPI/model/dto/Pokemon.java).
+Cuando el campo tiene el mismo nombre que la columna entonces no es necesario colocar el parametro **name**. Esto se puede ver ejemplificado en la clase [Pokemon](src/main/java/com/example/PokemonAPI/model/entity/Pokemon.java).
 
 ### La anotacion @Id
 

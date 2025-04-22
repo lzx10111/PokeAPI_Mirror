@@ -1,13 +1,12 @@
 package com.example.PokemonAPI.service;
 
 
-import com.example.PokemonAPI.model.dto.Favorite;
-import com.example.PokemonAPI.model.dto.User;
+import com.example.PokemonAPI.model.entity.Favorite;
+import com.example.PokemonAPI.model.entity.User;
 import com.example.PokemonAPI.model.util.FavoriteId;
 import com.example.PokemonAPI.model.util.Role;
 import com.example.PokemonAPI.repository.FavoriteRepository;
 import com.example.PokemonAPI.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

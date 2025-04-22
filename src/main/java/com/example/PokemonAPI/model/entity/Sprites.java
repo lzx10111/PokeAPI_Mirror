@@ -1,4 +1,4 @@
-package com.example.PokemonAPI.model.dto;
+package com.example.PokemonAPI.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;

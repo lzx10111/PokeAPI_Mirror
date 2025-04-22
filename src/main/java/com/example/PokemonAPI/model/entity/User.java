@@ -1,4 +1,4 @@
-package com.example.PokemonAPI.model.dto;
+package com.example.PokemonAPI.model.entity;
 
 import com.example.PokemonAPI.annotation.DateHtml;
 import com.example.PokemonAPI.model.util.Role;

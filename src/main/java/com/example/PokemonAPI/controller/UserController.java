@@ -1,22 +1,19 @@
 package com.example.PokemonAPI.controller;
 
-import com.example.PokemonAPI.model.dto.Favorite;
-import com.example.PokemonAPI.model.dto.User;
+import com.example.PokemonAPI.model.entity.Favorite;
+import com.example.PokemonAPI.model.entity.User;
 import com.example.PokemonAPI.service.PokemonService;
 import com.example.PokemonAPI.service.UserService;
 import jakarta.servlet.http.Cookie;
-import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import org.springframework.web.servlet.support.RequestContextUtils;
 import org.springframework.web.servlet.view.RedirectView;
 
 

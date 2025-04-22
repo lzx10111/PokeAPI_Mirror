@@ -1,6 +1,6 @@
 package com.example.PokemonAPI.repository;
 
-import com.example.PokemonAPI.model.dto.Favorite;
+import com.example.PokemonAPI.model.entity.Favorite;
 import org.springframework.data.jpa.domain.Specification;
 
 public class FavoriteSpecifications {

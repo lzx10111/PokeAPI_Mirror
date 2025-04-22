@@ -1,6 +1,6 @@
 package com.example.PokemonAPI.repository;
 
-import com.example.PokemonAPI.model.dto.Pokemon;
+import com.example.PokemonAPI.model.entity.Pokemon;
 import org.springframework.data.jpa.domain.Specification;
 
 public class PokemonSpecifications {
