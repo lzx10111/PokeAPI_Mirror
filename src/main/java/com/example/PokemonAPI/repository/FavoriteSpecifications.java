@@ -10,7 +10,7 @@ public class FavoriteSpecifications {
                 return criteriaBuilder.conjunction();
             }
 
-            return criteriaBuilder.equal(root.get("id").get("userId"), Integer.parseInt(id));
+            return criteriaBuilder.equal(root.get("userId"), Integer.parseInt(id));
         };
     }
 }
