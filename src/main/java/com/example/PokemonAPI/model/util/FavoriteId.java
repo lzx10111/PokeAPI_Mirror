@@ -1,10 +1,8 @@
 package com.example.PokemonAPI.model.util;
 
-import jakarta.persistence.Embeddable;
 import java.io.Serializable;
 import java.util.Objects;
 
-@Embeddable
 public class FavoriteId implements Serializable {
 
     private Integer userId;
