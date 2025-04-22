@@ -358,10 +358,8 @@ $(document).ready(function () {
         const header = $("meta[name='_csrf_header']").attr("content");
 
         const dataFavorite = {
-            id: {
-                userId: "",
-                pokemonId: childrenInput
-            }
+            userId: "",
+            pokemonId: childrenInput
         };
 
         $.ajax({
