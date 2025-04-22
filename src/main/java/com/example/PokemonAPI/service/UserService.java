@@ -3,6 +3,7 @@ package com.example.PokemonAPI.service;
 
 import com.example.PokemonAPI.model.dto.Favorite;
 import com.example.PokemonAPI.model.dto.User;
+import com.example.PokemonAPI.model.util.FavoriteId;
 import com.example.PokemonAPI.model.util.Role;
 import com.example.PokemonAPI.repository.FavoriteRepository;
 import com.example.PokemonAPI.repository.UserRepository;
@@ -85,7 +86,7 @@ public class UserService implements UserDetailsService {
     }
 
     public boolean favoriteExists(Favorite favorite) {
-        return favoriteRepository.existsById(favorite.getId());
+        return favoriteRepository.existsById(new FavoriteId(favorite.getUserId(), favorite.getPokemonId()));
     }
 
     public User getUser() {
