@@ -214,12 +214,29 @@ Algunas veces se tiene mas de una **PRIMARY KEY** en la respectiva tabla. Para e
 - La clase debe de implementar la interfaz **Serializable**.
 
 ```java
-@Entity
-public class Pokemon {
-   @Id
-   @Column
-   private Integer id;
+// La clase es publica (public) e implementa Serializable.
+public class FavoriteId implements Serializable {
 
-   // El otro codigo no se muestra para darle protagonismo al campo id.
-   }
+    private Integer userId;
+    private Integer pokemonId;
+
+    // Constructor default
+    public FavoriteId() {}
+
+    // Contructor parametrizado, getters, setters y metodo toString().
+
+    // Por ultimo los metodos equals() and hashCode().  
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        FavoriteId that = (FavoriteId) o;
+        return Objects.equals(userId, that.userId) && Objects.equals(pokemonId, that.pokemonId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(userId, pokemonId);
+    }
+}
 ```
