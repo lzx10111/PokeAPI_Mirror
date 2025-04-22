@@ -213,6 +213,8 @@ Algunas veces se tiene mas de una **PRIMARY KEY** en la respectiva tabla. Para e
 - La clase debe de tener los metodos equals() and hashCode().
 - La clase debe de implementar la interfaz **Serializable**.
 
+Lo anterior se puede ver reflejado en la clase [FavoriteId](src/main/java/com/example/PokemonAPI/model/util/FavoriteId.java).
+
 ```java
 // La clase es publica (public) e implementa Serializable.
 public class FavoriteId implements Serializable {
