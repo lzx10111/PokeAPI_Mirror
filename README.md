@@ -203,3 +203,42 @@ public class Pokemon {
    // El otro codigo no se muestra para darle protagonismo al campo id.
    }
 ```
+
+### La anotacion @IdClass
+
+Algunas veces se tiene mas de una **PRIMARY KEY** en la respectiva tabla. Para estos casos esta anotacion. Primero hay que crear una clase con los siguientes requisitos.
+
+- La clase debe ser **public**.
+- La clase debe tener un constructor default (sin argumentos).
+- La clase debe de tener los metodos equals() and hashCode().
+- La clase debe de implementar la interfaz **Serializable**.
+
+Lo anterior se puede ver reflejado en la clase [FavoriteId](src/main/java/com/example/PokemonAPI/model/util/FavoriteId.java).
+
+```java
+// La clase es publica (public) e implementa Serializable.
+public class FavoriteId implements Serializable {
+
+    private Integer userId;
+    private Integer pokemonId;
+
+    // Constructor default
+    public FavoriteId() {}
+
+    // Contructor parametrizado, getters, setters y metodo toString().
+
+    // Por ultimo los metodos equals() and hashCode().  
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        FavoriteId that = (FavoriteId) o;
+        return Objects.equals(userId, that.userId) && Objects.equals(pokemonId, that.pokemonId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(userId, pokemonId);
+    }
+}
+```
