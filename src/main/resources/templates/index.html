@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <link th:href="@{/css/index.css}" rel="stylesheet">
-    <script th:src="@{/js/index.js}"></script>
+    <script type="module" th:src="@{/js/index.js}"></script>
     <title>PokeApi</title>
 </head>
 <body>
@@ -68,7 +68,7 @@
 
     <div class="container border mt-4 border-secundary rounded">
         <div class="table-responsive">
-            <table class="table table-striped-columns">
+            <table class="table table-striped-columns" id="myTable">
                 <thead>
                 <tr>
                     <th scope="col">ID</th>
@@ -111,8 +111,8 @@
             <div class="row align-items-start justify-content-lg-end">
                 <div class="col-12 col-lg-auto mb-3 order-2 order-lg-1">
                     <div class="d-flex justify-content-center">
-                        <label for="multiplier" class="mt-1 me-2" id="labelMultiplier">Items por pagina:</label>
-                        <select class="form-select me-2" id="multiplier">
+                        <label for="myMultiplier" class="mt-1 me-2" id="labelMultiplier">Items por pagina:</label>
+                        <select class="form-select me-2" id="myMultiplier">
                             <option value="10">10</option>
                             <option value="20">20</option>
                             <option value="30">30</option>
