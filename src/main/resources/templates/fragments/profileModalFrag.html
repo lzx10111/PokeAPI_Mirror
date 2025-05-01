@@ -28,9 +28,6 @@
         </div>
         <div class="modal-body">
             <div class="row">
-<!--                <ul th:each="e : ${#lists.toList(errorMsgList)}">-->
-<!--                    <li th:text="${#strings.toString(e)}"></li>-->
-<!--                </ul>-->
                 <ul th:each="j : ${binding.getFieldErrors(field)}">
                     <li th:text="${j.getDefaultMessage()}"></li>
                 </ul>
