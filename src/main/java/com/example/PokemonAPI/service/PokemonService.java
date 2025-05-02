@@ -116,10 +116,11 @@ public class PokemonService {
     }
 
     public List<Pokemon> getListPokemonAllFiltered(SearchPokemon searchPokemon) {
+        System.out.println(searchPokemon);
         return pokemonRepository.findAll(where(nameLike(searchPokemon.getNameFilter()).
                 and(idLike(searchPokemon.getIdFilter())).
-                and(heightLike(searchPokemon.getHeightFilter())).
-                and(weightLike(searchPokemon.getWeightFilter()))));
+                and(heightLike(searchPokemon.getHeightFilterMin(), searchPokemon.getHeightFilterMax())).
+                and(weightLike(searchPokemon.getWeightFilterMin(), searchPokemon.getWeightFilterMax()))));
     }
 
     public Pokemon getPokemonByID(Integer id) {
