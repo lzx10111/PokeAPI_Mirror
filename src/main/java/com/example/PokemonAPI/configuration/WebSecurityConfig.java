@@ -36,10 +36,9 @@ public class WebSecurityConfig {
                 defaultSuccessUrl("/index", true).
                 permitAll());
 
-//        http.logout(logout -> logout.logoutSuccessUrl("/index").permitAll());
-
         return http.authorizeHttpRequests(authz -> authz
                         .requestMatchers("/css/login.css").permitAll()
+                        .requestMatchers("/img/pokeapi_logo.png").permitAll()
                         .requestMatchers("/css/register.css").permitAll()
                         .requestMatchers("/register").permitAll()
                         .requestMatchers("/index").hasRole("USER")
