@@ -28,22 +28,44 @@
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse ps-3 pe-3 rounded-bottom" data-bs-parent="#accordionExample">
                 <form th:action="@{/filter}" th:object="${searchPokemon}" method="post">
-                    <div class="row pt-3 pb-3">
-                        <div class="col-6 col-lg">
+                    <div class="row pt-3 pb-3 m-0">
+                        <div class="col-6 col-lg ps-0 ps-lg-3">
                             <label for="nameFilter" class="form-label">Nombre</label>
                             <input type="text" class="form-control" name="nameFilter" id="nameFilter">
                         </div>
-                        <div class="col-6 col-lg">
+                        <div class="col-6 col-lg pe-0 pe-lg-3">
                             <label for="idFilter" class="form-label">ID</label>
                             <input type="text" th:field="*{idFilter}" class="form-control" name="idFilter" id="idFilter">
                         </div>
-                        <div class="col-6 mt-3 col-lg mt-lg-0">
-                            <label for="heightFilter" class="form-label">Altura</label>
-                            <input type="range" th:min="${rangesFilter.minHeight}" th:max="${rangesFilter.maxHeight}" th:value="${rangesFilter.maxHeight}" class="form-range" name="heightFilter" id="heightFilter">
+                        <div class="col-12 col-lg mx-0 mx-lg-2 mt-4 mt-lg-0 border border-secundary rounded">
+                            <div class="row py-3">
+                                <div class="col-12 mb-2">
+                                    <label for="heightFilterMax" class="form-label">Altura</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Max" name="heightFilterMax"
+                                           id="heightFilterMax">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Min" name="heightFilterMin"
+                                           id="heightFilterMin">
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-6 mt-3 col-lg mt-lg-0">
-                            <label for="weightFilter" class="form-label">Peso</label>
-                            <input type="range" th:min="${rangesFilter.minWeight}" th:max="${rangesFilter.maxWeight}" th:value="${rangesFilter.maxWeight}" class="form-range" name="weightFilter" id="weightFilter">
+                        <div class="col-12 col-lg mx-0 mx-lg-2 mt-4 mt-lg-0 border border-secundary rounded">
+                            <div class="row py-3">
+                                <div class="col-12 mb-2">
+                                    <label for="weightFilterMax" class="form-label">Peso</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Max" name="weightFilterMax"
+                                           id="weightFilterMax">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Min" name="weightFilterMin"
+                                           id="weightFilterMin">
+                                </div>
+                            </div>
                         </div>
                         <div class="col">
                             <label for="buscar" class="form-label">&nbsp;</label>
