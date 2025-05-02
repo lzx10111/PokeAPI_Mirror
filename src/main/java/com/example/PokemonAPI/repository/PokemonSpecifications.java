@@ -1,6 +1,7 @@
 package com.example.PokemonAPI.repository;
 
 import com.example.PokemonAPI.model.entity.Pokemon;
+import jakarta.persistence.criteria.Predicate;
 import org.springframework.data.jpa.domain.Specification;
 
 public class PokemonSpecifications {
@@ -25,12 +26,48 @@ public class PokemonSpecifications {
         };
     }
 
-    public static Specification<Pokemon> heightLike(String height) {
-        return (root, query, criteriaBuilder) -> criteriaBuilder.lessThanOrEqualTo(root.get("height"), Integer.parseInt(height));
+    public static Specification<Pokemon> heightLike(String min, String max) {
+        return (root, query, criteriaBuilder) -> {
+            Predicate minPred;
+            Predicate maxPred;
+            String value1 = min;
+            String value2 = max;
+
+            if (min == null || min.isEmpty()) {
+                value1 = "0";
+            }
+
+            if (max == null || max.isEmpty()) {
+                value2 = "999999999";
+            }
+
+            minPred = criteriaBuilder.greaterThanOrEqualTo(root.get("height"), Integer.parseInt(value1));
+            maxPred = criteriaBuilder.lessThanOrEqualTo(root.get("height"), Integer.parseInt(value2));
+
+            return criteriaBuilder.and(minPred, maxPred);
+        };
     }
 
-    public static Specification<Pokemon> weightLike(String weight) {
-        return (root, query, criteriaBuilder) -> criteriaBuilder.lessThanOrEqualTo(root.get("weight"), Integer.parseInt(weight));
+    public static Specification<Pokemon> weightLike(String min, String max) {
+        return (root, query, criteriaBuilder) -> {
+            Predicate minPred;
+            Predicate maxPred;
+            String value1 = min;
+            String value2 = max;
+
+            if (min == null || min.isEmpty()) {
+                value1 = "0";
+            }
+
+            if (max == null || max.isEmpty()) {
+                value2 = "999999999";
+            }
+
+            minPred = criteriaBuilder.greaterThanOrEqualTo(root.get("weight"), Integer.parseInt(value1));
+            maxPred = criteriaBuilder.lessThanOrEqualTo(root.get("weight"), Integer.parseInt(value2));
+
+            return criteriaBuilder.and(minPred, maxPred);
+        };
     }
 
     public static Specification<Pokemon> idGreaterThanOrEqualTo(String id) {
