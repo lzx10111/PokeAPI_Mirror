@@ -1,11 +1,5 @@
-.hr {
-    height: 1px;
-    margin: 0.5rem 0;
-    color: #c1c3c4;
-    background-color: #c1c3c4;
-    border: 0;
-    opacity: 0.25;
-}
+@import "navbar.css";
+@import "footer.css";
 
 @media(min-width:1200px) {
 
@@ -23,7 +17,11 @@
 }
 
 @media(max-width:575px) {
+    #containerTable {
+        width: calc(100% - 1.5rem * 2);
+    }
+
     #labelMultiplier {
-        font-size: 5vw;
+        font-size: 4vw;
     }
 }
