@@ -1,0 +1,13 @@
+.hr {
+    height: 1px;
+    margin: 0.5rem 0;
+    color: #c1c3c4;
+    background-color: #c1c3c4;
+    border: 0;
+    opacity: 0.25;
+}
+
+#imgNavbarBrand {
+    aspect-ratio: 5/2;
+    height: 40px;
+}
